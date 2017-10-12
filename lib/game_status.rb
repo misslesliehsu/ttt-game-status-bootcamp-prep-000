@@ -57,10 +57,10 @@ def draw?(board)
 end
 
 def winner?(board)
-  if won?(board) != nil
-    return won?(board)
+  win = won?(board) 
+  if win != nil
+    return board[win[0]]
   else false
   end
-winner = won?(board)
-return board[winner[0]]
 end
+
