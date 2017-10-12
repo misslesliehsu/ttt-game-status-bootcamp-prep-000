@@ -18,8 +18,10 @@ def won?(board)
   WIN_COMBINATIONS.each do |winning_triplet|
     if winning_triplet[0] =="X" && winning_triplet[1] == "X" && winning_triplet[2] == "X"
       return winning_triplet
+      break
     elsif winning_triplet[0] == "O" && winning_triplet[1] == "O" && winning_triplet[2] == "O"
       return winning_triplet
+      break
     else
       return nil
     end
