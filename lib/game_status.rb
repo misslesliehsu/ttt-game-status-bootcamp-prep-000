@@ -15,9 +15,17 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect do |winning_triplet|
-    (winning_triplet[0] =="X" && winning_triplet[1] == "X" && winning_triplet[2] == "X") || (winning_triplet[0] == "O" && winning_triplet[1] == "O" && winning_triplet[2] == "O")
-    end
+  WIN_COMBINATIONS.each do |winning_array|
+  win1 = winning_array[0]
+  win2 = winning_array[1]
+  win3 = winning_array[2]
+  if win1 == "X" && win2 == "X" && win3 == "X"
+    return winning_array
+    break
+  elsif win1 == "O" && win2 == "O" && win3 == "O"
+    return winning_array
+    break
+  else return nil    
 end
 
 def full?(board)
