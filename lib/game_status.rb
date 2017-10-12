@@ -25,7 +25,7 @@ def won?(board)
   elsif win1 == "O" && win2 == "O" && win3 == "O"
     return winning_array
     break
-  else return nil    
+  else return nil
 end
 
 def full?(board)
