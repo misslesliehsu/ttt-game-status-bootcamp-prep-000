@@ -20,7 +20,7 @@ def won?(board)
       return winning_triplet
     elsif winning_triplet[0] == "O" && winning_triple[1] == "O" & winning_triplet[2] == "O"
        return winning_triplet
-     else 
+     else
        return nil
     end
   end
