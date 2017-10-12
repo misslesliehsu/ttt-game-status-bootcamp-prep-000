@@ -45,4 +45,3 @@ def winner?(board)
   winner = winner_combo[0]
 return winner
 end
-
