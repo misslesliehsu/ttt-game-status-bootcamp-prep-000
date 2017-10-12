@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |winning_triplet|
-    winning_triplet.detect? do |square|
+    winning_triplet.detect do |square|
       board[square] == "X" || board[square] == "O"
     end
   end
