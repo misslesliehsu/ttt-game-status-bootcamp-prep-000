@@ -23,7 +23,8 @@ def won?(board)
     return winning_array
   elsif board[win1] == "O" && board[win2] == "O" && board[win3] == "O"
     return winning_array
-  else false
+  else 
+    return nil
   end
 end
 end
