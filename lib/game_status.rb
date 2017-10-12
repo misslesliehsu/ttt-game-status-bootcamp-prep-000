@@ -46,7 +46,3 @@ def winner?(board)
 return winner
 end
 
-    
-  #not full
-  #full but win
-  #full but no win
