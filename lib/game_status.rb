@@ -25,7 +25,7 @@ def won?(board)
     win = winning_array
   else false
   end
-  return win
+return win
 end
 end
 
