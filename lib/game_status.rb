@@ -20,12 +20,11 @@ def won?(board)
   win2 = winning_array[1]
   win3 = winning_array[2]
   if board[win1] == "X" && board[win2] == "X" && board[win3] == "X"
-    win = winning_array
+    return winning_array
   elsif board[win1] == "O" && board[win2] == "O" && board[win3] == "O"
-    win = winning_array
+    return = winning_array
   else false
   end
-return win
 end
 end
 
