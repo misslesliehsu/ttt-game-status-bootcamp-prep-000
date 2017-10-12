@@ -26,7 +26,10 @@ def won?(board)
     return winning_array
     break
   else return nil
+  end
 end
+end
+
 
 def full?(board)
   board.all? do |index|
