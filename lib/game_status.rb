@@ -13,4 +13,21 @@ WIN_COMBINATIONS = [
   [6,7,8],
   [6,4,2]
 ]
-# Define your WIN_COMBINATIONS constant
+
+def won?(board)
+  WIN_COMBINATIONS.each do |winning_triplet|
+    winning_triplet.detect? do |square|
+      board[square] == "X" || board[square] == "O"  
+    end
+  end
+end
+
+def full?(board)
+  board.all? do |index|
+    index == "X" || index == "O"
+  end
+end
+
+    
+    
+      
