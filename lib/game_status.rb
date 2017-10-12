@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
 def won?(board)
   WIN_COMBINATIONS.each do |winning_triplet|
     winning_triplet.detect? do |square|
-      board[square] == "X" || board[square] == "O"  
+      board[square] == "X" || board[square] == "O"
     end
   end
 end
@@ -28,6 +28,25 @@ def full?(board)
   end
 end
 
+def draw?(board)
+  full = full?(board)
+  won = won?(board)
+  if full == false
+    return false
+  elsif full == true && won == true
+    return false
+  elsif full == true && won == false
+    return true
+  end
+end
+
+def winner?(board)
+  winner_combo = won?(board)
+  winner = winner_combo[0]
+return winner
+end
+
     
-    
-      
+  #not full
+  #full but win
+  #full but no win
