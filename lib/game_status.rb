@@ -16,15 +16,8 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.detect do |winning_triplet|
-    if winning_triplet[0] =="X" && winning_triplet[1] == "X" && winning_triplet[2] == "X"
-      return winning_triplet
-      break
-    elsif winning_triplet[0] == "O" && winning_triplet[1] == "O" && winning_triplet[2] == "O"
-      return winning_triplet
-    else
-      return nil
+    (winning_triplet[0] =="X" && winning_triplet[1] == "X" && winning_triplet[2] == "X") || (winning_triplet[0] == "O" && winning_triplet[1] == "O" && winning_triplet[2] == "O")
     end
-  end
 end
 
 def full?(board)
