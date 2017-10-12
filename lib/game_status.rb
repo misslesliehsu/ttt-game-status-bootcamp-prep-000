@@ -30,9 +30,10 @@ end
 
 
 def full?(board)
-  board.all? do |index|
+  full = board.all? do |index|
     index == "X" || index == "O"
   end
+  return full
 end
 
 def draw?(board)
